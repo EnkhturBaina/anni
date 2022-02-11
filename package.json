@@ -1,6 +1,7 @@
 {
   "name": "anni-app",
   "version": "0.1.0",
+  "main": "index.js",
   "private": true,
   "homepage": "https://enkhturbaina.github.io/anni",
   "dependencies": {
