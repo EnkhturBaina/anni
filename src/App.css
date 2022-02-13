@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
 body {
+  font-family: "Montserrat", sans-serif;
   background: #ecebeb;
   height: 100vh;
   display: grid;
@@ -84,6 +84,7 @@ body .mainHeart {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 150px;
 }
 body .mainHeart svg {
   margin-top: 0%;
@@ -106,11 +107,10 @@ body .mainHeart svg .drawHeart {
 body .greeting {
   font-family: "Amatic SC", cursive;
   text-align: center;
-  font-size: 45px;
+  font-size: 24px;
   position: absolute;
-  bottom: 5%;
   left: 0;
-  height: 45px;
+  height: 60px;
   line-height: 1;
   overflow: hidden;
   display: flex;
@@ -126,4 +126,66 @@ body .greeting .s.space {
 }
 body .greeting .s.squeeze {
   margin-left: -2px;
+}
+.bg_heart {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  top: -50%;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -m-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.heart:before {
+  position: absolute;
+  top: -50%;
+  left: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 100%;
+}
+
+.heart:after {
+  position: absolute;
+  top: 0;
+  right: -50%;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 100%;
+}
+
+@-webkit-keyframes love {
+  0% {
+    top: 110%;
+  }
+}
+@-moz-keyframes love {
+  0% {
+    top: 110%;
+  }
+}
+@-ms-keyframes love {
+  0% {
+    top: 110%;
+  }
+}
+@keyframes love {
+  0% {
+    top: 110%;
+  }
 }
