@@ -105,7 +105,6 @@ body .mainHeart svg .drawHeart {
   }
 }
 body .greeting {
-  font-family: "Amatic SC", cursive;
   text-align: center;
   font-size: 24px;
   position: absolute;
