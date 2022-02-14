@@ -58,7 +58,7 @@ function App() {
     var displayTime1 = 0;
     var displayMinute1 = 0;
     const { seconds, minutes, hours, days } = useStopwatch({ autoStart: true });
-    const date1 = new Date("7/07/2019 17:17:17");
+    const date1 = new Date("7/17/2020 17:17:17");
     const date2 = new Date();
     const diffTime = Math.abs(date2 - date1);
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
