@@ -84,7 +84,7 @@ body .mainHeart {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 150px;
+  margin-top: 50px;
 }
 body .mainHeart svg {
   margin-top: 0%;
@@ -111,9 +111,10 @@ body .greeting {
   left: 0;
   height: 60px;
   line-height: 1;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 body .greeting .s {
   display: table-cell;
@@ -187,4 +188,7 @@ body .greeting .s.squeeze {
   0% {
     top: 110%;
   }
+}
+.mainText{
+font-size: 14px;
 }
