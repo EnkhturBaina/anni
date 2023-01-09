@@ -67,6 +67,7 @@ function App() {
       "Until you gave up heaven, so we could be together",
     ];
     const createTypingEffect = async (text, index) => {
+      console.log("TEXT", text);
       return Promise.all(
         text.split("").map(
           (c, i) =>
@@ -89,7 +90,7 @@ function App() {
       for (let i = 0; i <= starterArray.length; i++) {
         // Setting empty string for each line in starterArray so we dont get undefined as first character
         setIntroArray((introArray) => [...introArray, ""]);
-        // await createTypingEffect(starterText, i);
+        await createTypingEffect(starterArray[i], i);
       }
     };
 
