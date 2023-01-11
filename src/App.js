@@ -11,7 +11,6 @@ function App() {
   const el = useRef(null);
   // Create reference to store the Typed instance itself
   const typed = useRef(null);
-  const [introArray, setIntroArray] = useState([]);
   const textAnim = () => {
     const tl = gsap.timeline();
     tl.set(".s", {
@@ -60,41 +59,6 @@ function App() {
   useEffect(() => {
     textAnim();
     smallHeartAnim();
-    const starterArray = [
-      "I just wanna live in this moment forever",
-      "'Cause I'm afraid that living couldn't get any better",
-      "Started giving up on the word 'forever'",
-      "Until you gave up heaven, so we could be together",
-    ];
-    const createTypingEffect = async (text, index) => {
-      console.log("TEXT", text);
-      return Promise.all(
-        text.split("").map(
-          (c, i) =>
-            new Promise((res) => {
-              setTimeout(() => {
-                let arrayCopy = introArray.slice();
-                setIntroArray((introArray) => [
-                  ...introArray.slice(0, index),
-                  arrayCopy[index] + c,
-                  ...introArray.slice(index + 1),
-                ]);
-                res(null);
-              }, 80 * i);
-            })
-        )
-      );
-    };
-    const cycle = async () => {
-      // const starterText of starterArray
-      for (let i = 0; i <= starterArray.length; i++) {
-        // Setting empty string for each line in starterArray so we dont get undefined as first character
-        setIntroArray((introArray) => [...introArray, ""]);
-        await createTypingEffect(starterArray[i], i);
-      }
-    };
-
-    cycle();
   });
   function MyStopwatch() {
     var displayTime1 = 0;
@@ -134,7 +98,7 @@ function App() {
       <header className="App-header">
         <MyStopwatch />
         <div className="drawBox">
-          {/* <div className="smallHearts"></div>
+          <div className="smallHearts"></div>
 
           <div className="mainHeart">
             <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -148,11 +112,11 @@ function App() {
                 d="M8.15 22.44l12.23-6.31c.45.81-11 12-11 12L28.5 15.45 9.17 34.54l23.14-17.8-22 21.41 25-19.67L11.58 44l28.09-23.35-27.05 27.13 29.65-23.85-28.91 28.8 32.27-26.15-28.74 28.69 29.76-26.82S33.29 44.14 20.12 57.06L64.8 16.75 21.51 61l53.07-48.15L25 62.91l53.77-48.76-51 51.37L83 16.75l-51.67 52L85.75 22 34.08 72.67l55.68-47-51.49 49.6 51.67-41.61-48.88 44.21 49.58-38.36-48.18 41L85.8 51.12l-40.61 32 35.56-24.21L46 86.32 63.31 77 49.44 87l7-1.3-5.89 4.3"
               />
             </svg>
-          </div> */}
+          </div>
 
           <div className="greeting">
             <div>
-              {/* <span className="s"> H</span>
+              <span className="s"> H</span>
               <span className="s">a</span>
               <span className="s">p</span>
               <span className="s">p</span>
@@ -170,12 +134,7 @@ function App() {
               <span className="s squeeze">s</span>
               <span className="s space">D</span>
               <span className="s">a</span>
-              <span className="s">y </span> */}
-              {introArray.map((introLine, index) => (
-                <div className="flex items-center" key={index}>
-                  <p className="text-white">{introLine}</p>
-                </div>
-              ))}
+              <span className="s">y </span>
             </div>
           </div>
         </div>
