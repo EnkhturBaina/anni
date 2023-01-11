@@ -116,7 +116,7 @@ function App() {
 
           <div className="greeting">
             <div>
-              <span className="s"> H</span>
+              {/* <span className="s"> H</span>
               <span className="s">a</span>
               <span className="s">p</span>
               <span className="s">p</span>
@@ -134,7 +134,7 @@ function App() {
               <span className="s squeeze">s</span>
               <span className="s space">D</span>
               <span className="s">a</span>
-              <span className="s">y </span>
+              <span className="s">y </span> */}
             </div>
           </div>
         </div>
