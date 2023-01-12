@@ -1,4 +1,10 @@
-body {
+
+.main-btn{
+  background-color:red;
+  border: 0;
+  color:#fff;
+  padding: 2px
+}body {
   font-family: "Montserrat", sans-serif;
   background: #ecebeb;
   height: 100vh;
@@ -191,4 +197,22 @@ body .greeting .s.squeeze {
 }
 .mainText{
 font-size: 14px;
+}
+.main-btn{
+  background-color:rgb(243, 71, 71);
+  border: 0;
+  color:#fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 5px;
+  border-radius: 8px;
+  z-index: 999;
+}
+#root{
+  width: 90%;
+}
+.App-header {
+  width: 100%;
 }
