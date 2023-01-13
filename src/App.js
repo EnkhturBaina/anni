@@ -4,6 +4,7 @@ import "./snow";
 import Count from "./pages/Count";
 import Birthday from "./pages/Birthday";
 import Note from "./pages/Note";
+import Gallery from "./pages/Gallery";
 
 function App() {
   const [menu, setMenu] = useState(1);
@@ -12,6 +13,7 @@ function App() {
       {menu === 1 ? <Count /> : null}
       {menu === 2 ? <Birthday /> : null}
       {menu === 3 ? <Note /> : null}
+      {menu === 4 ? <Gallery /> : null}
       <div
         style={{
           position: "absolute",
@@ -30,6 +32,9 @@ function App() {
         </button> */}
         <button className="main-btn" onClick={() => setMenu(3)}>
           ❤️
+        </button>
+        <button className="main-btn" onClick={() => setMenu(4)}>
+          🙆
         </button>
       </div>
     </div>
