@@ -17,6 +17,8 @@ body .drawBox {
   width: 100%;
   max-height: 330px;
   max-width: 330px;
+  margin-right: auto;
+  margin-left: auto;
 }
 body .drawBox .smallHearts {
   position: absolute;

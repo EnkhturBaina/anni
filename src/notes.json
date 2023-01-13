@@ -1,0 +1,57 @@
+[
+    {
+      "value": "0",
+      "label": "Сонгох",
+      "content": "A"
+    },
+    {
+      "value": "1",
+      "label": "Жаргалтай үедээ",
+      "content": "A"
+    },
+    {
+      "value": "2",
+      "label": "Гунигтай үедээ",
+      "content": "A"
+    },
+    {
+      "value": "3",
+      "label": "Уйтгарласан үедээ",
+      "content": "A"
+    },
+    {
+      "value": "4",
+      "label": "Надад уурласан үедээ",
+      "content": "A"
+    },
+    {
+      "value": "5",
+      "label": "Унтаж чадахгүй үедээ",
+      "content": "A"
+    },
+    {
+      "value": "6",
+      "label": "Шантарсан үедээ",
+      "content": "A"
+    },
+    {
+      "value": "7",
+      "label": "Гомдсон үедээ",
+      "content": "A"
+    },
+    {
+      "value": "8",
+      "label": "Санасан үедээ",
+      "content": "A"
+    },
+    {
+      "value": "9",
+      "label": "Өвдсөн үедээ",
+      "content": "A"
+    },
+    {
+      "value": "10",
+      "label": "Уйтгарласан үедээ",
+      "content": "A"
+    }
+  ]

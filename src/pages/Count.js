@@ -1,8 +1,15 @@
 import { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
+import { gsap, random } from "gsap";
 import { useStopwatch } from "react-timer-hook";
+import randomWords from "../randomWords.json";
 
 function Count() {
+  const [randomWord, setRandomWord] = useState(null);
+
+  useEffect(() => {
+    setRandomWord(randomWords[Math.floor(Math.random() * randomWords.length)]);
+  }, []);
+
   const textAnim = () => {
     const tl = gsap.timeline();
     tl.set(".s", {
@@ -125,6 +132,14 @@ function Count() {
               <span className="s space">D</span>
               <span className="s">a</span>
               <span className="s">y </span> */}
+          </div>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <span style={{ fontSize: 15 }}>
+              {randomWord && randomWord.label}
+            </span>
+            <span style={{ fontSize: 16, color: "gray", marginTop: 10 }}>
+              {randomWord && randomWord.name}
+            </span>
           </div>
         </div>
       </div>

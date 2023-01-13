@@ -26,7 +26,7 @@ function App() {
           🙆‍♂️
         </button>
         {/* <button className="main-btn" onClick={() => setMenu(2)}>
-          Төрсөн өдөр
+          🎂
         </button> */}
         <button className="main-btn" onClick={() => setMenu(3)}>
           ❤️

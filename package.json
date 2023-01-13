@@ -11,6 +11,7 @@
     "antd": "^5.1.4",
     "gsap": "^3.9.1",
     "react": "^17.0.2",
+    "react-card-flip": "^1.2.0",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
     "react-timer-hook": "^3.0.5",
