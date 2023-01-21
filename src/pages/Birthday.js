@@ -7,21 +7,21 @@ function Birthday() {
   return (
     <div>
       <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
-        <div class="cake" onClick={() => setIsFlipped(!isFlipped)}>
-          <div class="plate"></div>
-          <div class="layer layer-bottom"></div>
-          <div class="layer layer-middle"></div>
-          <div class="layer layer-top"></div>
-          <div class="icing"></div>
-          <div class="drip drip1"></div>
-          <div class="drip drip2"></div>
-          <div class="drip drip3"></div>
-          <div class="candle">
-            <div class="flame"></div>
+        <div className="cake" onClick={() => setIsFlipped(!isFlipped)}>
+          <div className="plate"></div>
+          <div className="layer layer-bottom"></div>
+          <div className="layer layer-middle"></div>
+          <div className="layer layer-top"></div>
+          <div className="icing"></div>
+          <div className="drip drip1"></div>
+          <div className="drip drip2"></div>
+          <div className="drip drip3"></div>
+          <div className="candle">
+            <div className="flame"></div>
           </div>
         </div>
 
-        <div class="text" onClick={() => setIsFlipped(!isFlipped)}>
+        <div className="text" onClick={() => setIsFlipped(!isFlipped)}>
           <span style={{ marginBottom: 5 }}>Хамгийн дүрсгүй </span>
           <br />
           <span>Хамгийн эгдүүтэй</span>
