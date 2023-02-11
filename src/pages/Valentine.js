@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ReactTextTransition, { presets } from "react-text-transition";
 import { TypeAnimation } from "react-type-animation";
 import ReactCardFlip from "react-card-flip";
+import "../valentine.css";
 
 const TEXTS = [
   "so",
@@ -49,21 +50,10 @@ function Valentine() {
         </ReactTextTransition>
         much -1 🤭.
       </section>
-      <div
-        style={{
-          marginTop: 20,
-          marginBottom: 20,
-        }}
-      >
+      <div className="card-container">
         <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
           <div className="bubududu" onClick={() => setIsFlipped(!isFlipped)}>
-            <img
-              src={require("../bubududu.jpg")}
-              style={{
-                width: "100%",
-                height: 400,
-              }}
-            />
+            <img className="bubududuImg" src={require("../bubududu.jpg")} />
           </div>
           <div className="text" onClick={() => setIsFlipped(!isFlipped)}>
             <span>
