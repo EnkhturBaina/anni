@@ -10,19 +10,6 @@ function Count() {
     setRandomWord(randomWords[Math.floor(Math.random() * randomWords.length)]);
   }, []);
 
-  const textAnim = () => {
-    const tl = gsap.timeline();
-    tl.set(".s", {
-      opacity: 1,
-    }).from(".s", {
-      duration: 0.4,
-      delay: "3",
-      ease: "power1.inOut",
-      scale: 0,
-      y: 40,
-      stagger: 0.04,
-    });
-  };
   const smallHeartAnim = () => {
     const tl = gsap.timeline();
     tl.set(".smallHeart", {
@@ -56,7 +43,6 @@ function Count() {
   };
 
   useEffect(() => {
-    textAnim();
     smallHeartAnim();
   });
   function MyStopwatch() {
@@ -112,27 +98,6 @@ function Count() {
         </div>
 
         <div className="greeting">
-          <div>
-            {/* <span className="s"> H</span>
-              <span className="s">a</span>
-              <span className="s">p</span>
-              <span className="s">p</span>
-              <span className="s">y</span>
-              <span className="s space">V</span>
-              <span className="s">a</span>
-              <span className="s">l</span>
-              <span className="s">e</span>
-              <span className="s">n</span>
-              <span className="s">t</span>
-              <span className="s">i</span>
-              <span className="s">n</span>
-              <span className="s">e</span>
-              <span className="s">'</span>
-              <span className="s squeeze">s</span>
-              <span className="s space">D</span>
-              <span className="s">a</span>
-              <span className="s">y </span> */}
-          </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <span style={{ fontSize: 15 }}>
               {randomWord && randomWord.label}
