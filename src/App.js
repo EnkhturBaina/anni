@@ -6,6 +6,7 @@ import Birthday from "./pages/Birthday";
 import Note from "./pages/Note";
 import Gallery from "./pages/Gallery";
 import Plane from "./pages/Plane";
+import Words from "./pages/Words";
 
 function App() {
   const [menu, setMenu] = useState(1);
@@ -16,6 +17,7 @@ function App() {
       {menu === 3 ? <Note /> : null}
       {menu === 4 ? <Gallery /> : null}
       {menu === 5 ? <Plane /> : null}
+      {menu === 6 ? <Words /> : null}
       <div
         style={{
           position: "absolute",
@@ -40,6 +42,9 @@ function App() {
         </button>
         <button className="main-btn" onClick={() => setMenu(5)}>
           ✈️
+        </button>
+        <button className="main-btn" onClick={() => setMenu(6)}>
+          👩‍❤️‍💋‍👨
         </button>
       </div>
     </div>

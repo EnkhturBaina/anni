@@ -6,8 +6,8 @@
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
@@ -17,6 +17,94 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <script type="text/javascript">
+    function test(){
+    // var lyric = "i couldn't take it couldn't stand another minute couldn't bear another day without you in it";
+    var lyric = "Хайртай_Шүү Olsoj_bolohgui 🤭 1👉2👉3👉4👉8 🙆‍♂️ Миний_Үрээ 🙆 Миний_Хайраа Toloi2 Миний_Хөөрхөн_Найз_Охин ULoveMe? Today Tomorrow Always Forever Uguuuuuuuu ❤️ Nouuuuuu Yeeeessssssssss Ydarj_Bolohgui Daarj_bolohgui Yesssss Today Tomorrow Always Forever Yeeeeeeeeeeeeeeees Aaaaaaaaaaaaaaaaaaaaaaaa Olsoj_bolohgui Yeeeeeeeeeeeyeeyeyeyye iiiiiiiii iiii iiiiiiiiiiii Hairtai_Shuuu 1👉2👉3👉4👉8 Ydarj_Bolohgui Zurh_Maani_Uragshaa_Hooshoo Toloi2 🤭 Shaldan_Kiss Kiss2 Kiss8 Хайртай_Шүү 🙆‍♂️ Миний_Үрээ 🤭 1👉2👉3👉4👉8 Today Tomorrow Always Forever Olsoj_bolohgui Миний_Хайраа Миний_Хөөрхөн_Найз_Охин Ydarj_Bolohgui ULoveMe? Uguuuuuuuu 🤭 Yeeeeeeeeeeeeeeees ❤️ Eeeeeeeeeeeeeeeeee Yeeeeeeeeeeeyeeyeyeyye Saihan_Amraarai Goy_Zuud_Zuudleerei iiiiiiiii iiii iiiiiiiiiiii Миний_Үрээ 🤭 Миний_Хайраа Миний_Хөөрхөн_Найз_Охин 🙆 Zondoooo_Zondooooooo_Zondooooo Today Tomorrow Always Forever 🙆‍♂️ Mash2 Toloi2 1👉2👉3👉4👉8 Daarj_bolohgui Olsoj_bolohgui Ydarj_Bolohgui Today Tomorrow Always Forever";
+    var words = {};
+    var words_attr = [];
+    string_handle(lyric);
+
+    var canvas = document.getElementById('c');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    if (canvas.getContext) {
+      var c = canvas.getContext('2d'),
+        w = canvas.width,
+        h = canvas.height;
+
+      c.strokeStyle = 'red';
+      c.fillStyle = 'red';
+      c.lineWidth = 5;
+
+      // constructor
+      Word = function(key) {
+        this.text = key;
+        this.x = Math.random() * w;
+        this.y = Math.random() * h;
+        this.font = words[key] * 10 + 'px Lobster'
+        this.speed = (words[key]);
+      }
+      for (key in words) {
+        words_attr.push(new Word(key));
+      }
+      console.log(words_attr.length);
+
+      function animation() {
+        for (var i = 0; i < words_attr.length; i++) {
+          c.font = words_attr[i].font;
+          c.fillText(words_attr[i].text, words_attr[i].x, words_attr[i].y);
+          words_attr[i].width = c.measureText(words_attr[i].text).width;
+          c.stroke();
+        }
+        move();
+      }
+
+      function move() {
+        for (var i = 0; i < words_attr.length; i++) {
+          if (words_attr[i].x > w) {
+            words_attr[i].x = -words_attr[i].width;
+            words_attr[i].y = Math.random()*h;
+          }else{
+            words_attr[i].x += words_attr[i].speed;
+          }
+        }
+      }
+
+      setInterval(function() {
+        c.clearRect(0,0,w,h);
+        animation();
+      },24);
+
+    }
+
+    function string_handle(str) {
+      var split_str = str.split(" ");
+      var word_array = [];
+      var word_count = [];
+      for (var i = 0; i < split_str.length; i++) {
+        check = true;
+        for (var j = 0; j <= word_array.length; j++) {
+          if (split_str[i] == word_array[j]) {
+            word_count[j]++;
+            check = false;
+            break;
+          }
+        }
+        if (check) {
+          word_array.push(split_str[i]);
+          word_count.push(1);
+        }
+      }
+      for (var i = 0; i < word_array.length; i++) {
+        words[word_array[i]] = word_count[i];
+      }
+      return words;
+    }
+
+    }
+  </script>
   <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
