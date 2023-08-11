@@ -4,7 +4,7 @@ import "./snow";
 import Count from "./pages/Count";
 import Birthday from "./pages/Birthday";
 import Note from "./pages/Note";
-import Gallery from "./pages/Gallery";
+import Countdown from "./pages/Countdown";
 import Plane from "./pages/Plane";
 import Words from "./pages/Words";
 import Valentine from "./pages/Valentine";
@@ -13,11 +13,10 @@ function App() {
   const [menu, setMenu] = useState(1);
   return (
     <div className="App">
-      {/* https://govindcodes.github.io/ValentineWish/ */}
       {menu === 1 ? <Count /> : null}
       {menu === 2 ? <Birthday /> : null}
       {menu === 3 ? <Note /> : null}
-      {menu === 4 ? <Gallery /> : null}
+      {menu === 4 ? <Countdown /> : null}
       {menu === 5 ? <Plane /> : null}
       {menu === 6 ? <Valentine /> : null}
       {menu === 7 ? <Words /> : null}
@@ -41,7 +40,7 @@ function App() {
           ❤️
         </button> */}
         <button className="main-btn" onClick={() => setMenu(4)}>
-          🙆
+          ❤️
         </button>
         <button className="main-btn" onClick={() => setMenu(5)}>
           ✈️
