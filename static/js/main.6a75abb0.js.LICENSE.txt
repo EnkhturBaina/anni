@@ -59,3 +59,5 @@
  * Code provided under the BSD License
  * http://schillmania.com/projects/snowstorm/license.txt
  */
+
+//! moment.js
