@@ -46,7 +46,7 @@ function App() {
           ✈️
         </button>
         <button className="main-btn" onClick={() => setMenu(6)}>
-          ❤️
+          🙆
         </button>
         <button className="main-btn" onClick={() => setMenu(7)}>
           👩‍❤️‍💋‍👨

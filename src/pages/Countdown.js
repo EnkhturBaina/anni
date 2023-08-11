@@ -16,9 +16,17 @@ function CountDown() {
   const resultPerc = Math.round((difference / daysDifference) * 100);
   return (
     <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        marginBottom: 50,
+      }}
     >
-      <img style={{ borderRadius: 20 }} src={require("../mimibubu.gif")} />
+      <img
+        style={{ borderRadius: 20, width: 200, height: 200 }}
+        src={require("../mimibubu.gif")}
+      />
       <div className="container">
         <div className="white"></div>
 
