@@ -6,7 +6,7 @@ import moment from "moment";
 
 function CountDown() {
   var startOfDate = moment("02-22-2023", "MM-DD-YYYY");
-  var endDate = moment("09-22-2023", "MM-DD-YYYY");
+  var endDate = moment("09-19-2023", "MM-DD-YYYY");
   var todayDate = moment();
 
   const daysDifference = moment(endDate).diff(startOfDate, "days");
