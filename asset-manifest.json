@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/anni/static/css/main.f74b2f2a.css",
-    "main.js": "/anni/static/js/main.e4fd3050.js",
+    "main.js": "/anni/static/js/main.ce78e1d8.js",
     "static/media/mimibubu.gif": "/anni/static/media/mimibubu.f1fc34f7fff1fe4f382e.gif",
     "static/media/bubududu.jpg": "/anni/static/media/bubududu.7577b0f66dbbdaa7f666.jpg",
     "index.html": "/anni/index.html",
     "main.f74b2f2a.css.map": "/anni/static/css/main.f74b2f2a.css.map",
-    "main.e4fd3050.js.map": "/anni/static/js/main.e4fd3050.js.map"
+    "main.ce78e1d8.js.map": "/anni/static/js/main.ce78e1d8.js.map"
   },
   "entrypoints": [
     "static/css/main.f74b2f2a.css",
-    "static/js/main.e4fd3050.js"
+    "static/js/main.ce78e1d8.js"
   ]
 }
