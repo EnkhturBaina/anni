@@ -35,7 +35,7 @@ function CountDown() {
         <div className="blue"></div>
         <div id="timer"></div>
         <h2>😍 Бидний уулзах өдөр 😍</h2>
-        <h2>🕧(2023/01/22 - 2023/09/22)🕧</h2>
+        <h2>🕧(2023/01/22 - 2023/09/19)🕧</h2>
       </div>
       <div style={{ width: 300 }}>
         <ProgressBar
