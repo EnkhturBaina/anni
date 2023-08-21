@@ -5,8 +5,8 @@ import ProgressBar from "@ramonak/react-progress-bar";
 import moment from "moment";
 
 function CountDown() {
-  var startOfDate = moment("02-22-2023", "MM-DD-YYYY");
-  var endDate = moment("09-19-2023", "MM-DD-YYYY");
+  var startOfDate = moment("01-22-2023", "MM-DD-YYYY");
+  var endDate = moment("09-17-2023", "MM-DD-YYYY");
   var todayDate = moment();
 
   const daysDifference = moment(endDate).diff(startOfDate, "days");
@@ -35,7 +35,7 @@ function CountDown() {
         <div className="blue"></div>
         <div id="timer"></div>
         <h2>😍 Бидний уулзах өдөр 😍</h2>
-        <h2>🕧(2023/01/22 - 2023/09/19)🕧</h2>
+        <h2>🕧(2023/01/22 - 2023/09/17)🕧</h2>
       </div>
       <div style={{ width: 300 }}>
         <ProgressBar
