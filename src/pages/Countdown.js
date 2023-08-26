@@ -15,7 +15,7 @@ function CountDown() {
   const difference = todayDate.diff(startOfDate, "days");
 
   const resultPerc = Math.round((difference / daysDifference) * 100);
-  w;
+
   return (
     <div
       style={{
